@@ -45,6 +45,13 @@ path flags:
 python linear.py --model_path results/model_400.pth
 ```
 
+#### Pretrained Models
+|          | tau_plus | Arch | Latent Dim | Batch Size  | Accuracy(%) | Download |
+|----------|:---:|:----:|:---:|:---:|:---:|:---:|
+|  Biased | tau_plus = 0.0 | ResNet50 | 128  | 256  | 80.15  |  [model]()|
+|  Debiased |tau_plus = 0.05 | ResNet50 | 128  | 256  | 81.85  |  [model]()|
+|  Debiased |tau_plus = 0.1 | ResNet50 | 128  | 256  | 84.26  |   [model]()|
+
 ## Citation
 
 If you find this repo useful for your research, please consider citing the paper
