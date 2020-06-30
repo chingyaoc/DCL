@@ -24,14 +24,41 @@ A prominent technique for self-supervised representation learning has been to co
 - OpenCV
 
 ## Contrastive Representation Learning
+We can train standard (biased) or debiased version (M=1) of [SimCLR](https://arxiv.org/abs/2002.05709) with `main.py` on STL10 dataset.
 
-Train the representation encoder
+flags:
+  - `--debiased`: use debiased objective (True) or standard objective (False)
+  - `--tau_plus`: specify class probability
+  - `--batch_size`: batch size for SimCLR
+
+For instance, run the following command to train a debiased encoder.
 ```
 python main.py --tau_plus = 0.1
 ```
 
-Linear evaluation
+## Linear evaluation
+The model is evaluated by training a linear classifier after fixing the learned embedding.
+
+path flags:
+  - `--model_path`: specify the path to saved model
 ```
 python linear.py --model_path results/model_400.pth
 ```
 
+## Citation
+
+If you find this repo useful for your research, please consider citing the paper
+
+```
+@article{chuang2020debiased,
+  title={Debiased Contrastive Learning},
+  author={Chuang, Ching-Yao and Robinson, Joshua and Yen-Chen, Lin and Torralba, Antonio and Jegelka, Stefanie},
+  journal={arXiv preprint},
+  year={2020}
+}
+```
+For any questions, please contact Ching-Yao Chuang (cychuang@mit.edu).
+
+## Acknowledgements
+
+Part of this code is inspired by [leftthomas/SimCLR](https://github.com/leftthomas/SimCLR).
