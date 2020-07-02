@@ -60,7 +60,7 @@ If you find this repo useful for your research, please consider citing the paper
 @article{chuang2020debiased,
   title={Debiased Contrastive Learning},
   author={Chuang, Ching-Yao and Robinson, Joshua and Yen-Chen, Lin and Torralba, Antonio and Jegelka, Stefanie},
-  journal={arXiv preprint},
+  journal={arXiv preprint arXiv:2007.00224},
   year={2020}
 }
 ```
