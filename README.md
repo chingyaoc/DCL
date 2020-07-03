@@ -48,9 +48,9 @@ python linear.py --model_path results/model_400.pth
 #### Pretrained Models
 |          | tau_plus | Arch | Latent Dim | Batch Size  | Accuracy(%) | Download |
 |----------|:---:|:----:|:---:|:---:|:---:|:---:|
-|  Biased | tau_plus = 0.0 | ResNet50 | 128  | 256  | 80.15  |  [model]()|
-|  Debiased |tau_plus = 0.05 | ResNet50 | 128  | 256  | 81.85  |  [model]()|
-|  Debiased |tau_plus = 0.1 | ResNet50 | 128  | 256  | 84.26  |   [model]()|
+|  Biased | tau_plus = 0.0 | ResNet50 | 128  | 256  | 80.15  |  [model](https://drive.google.com/file/d/1qQE03ztnQCK4dtG-GPwCvF66nq_Mk_mo/view?usp=sharing)|
+|  Debiased |tau_plus = 0.05 | ResNet50 | 128  | 256  | 81.85  |  [model](https://drive.google.com/file/d/1pA4Hpcug8tbgH9O6PCu-447vJzxbbR5I/view?usp=sharing)|
+|  Debiased |tau_plus = 0.1 | ResNet50 | 128  | 256  | 84.26  |   [model](https://drive.google.com/file/d/1d8nfGHsHIuJYjU7mHtCtSXf98IbWMFAa/view?usp=sharing)|
 
 ## Citation
 
