@@ -48,7 +48,7 @@ def train(net, data_loader, train_optimizer, temperature, debiased, tau_plus):
             # constrain (optional)
             Ng = torch.clamp(Ng, min = N * np.e**(-1 / temperature))
         else:
-            Ng = neg
+            Ng = neg.sum(dim=-1)
 
         # contrastive loss
         loss = (- torch.log(pos / (pos + Ng) )).mean()
