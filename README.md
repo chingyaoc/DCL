@@ -7,7 +7,7 @@
 A prominent technique for self-supervised representation learning has been to contrast semantically similar and dissimilar pairs of samples. Without access to labels, dissimilar (negative) points are typically taken to be randomly sampled datapoints, implicitly accepting that these points may, in reality, actually have the same label. Perhaps unsurprisingly, we observe that sampling negative examples from truly different labels improves performance, in a synthetic setting where labels are available. Motivated by this observation, we develop a debiased contrastive objective that corrects for the sampling of same-label datapoints, even without knowledge of the true labels.
 
 
-**Debiased Contrastive Learning** [[paper]](https://arxiv.org/abs/2007.00224)
+**Debiased Contrastive Learning** NeurIPS 2020 [[paper]](https://arxiv.org/abs/2007.00224)
 <br/>
 [Ching-Yao Chuang](https://chingyaoc.github.io/), 
 [Joshua Robinson](https://joshrobinson.mit.edu/), 
@@ -57,10 +57,10 @@ python linear.py --model_path results/model_400.pth
 If you find this repo useful for your research, please consider citing the paper
 
 ```
-@article{chuang2020debiased,
+@inproceedings{chuang2020debiased,
   title={Debiased Contrastive Learning},
   author={Chuang, Ching-Yao and Robinson, Joshua and Yen-Chen, Lin and Torralba, Antonio and Jegelka, Stefanie},
-  journal={arXiv preprint arXiv:2007.00224},
+  booktitle={Advances in neural information processing systems},
   year={2020}
 }
 ```
