@@ -14,6 +14,12 @@ from model import Model
 
 
 def get_negative_mask(batch_size):
+    """
+    Generate mask
+
+    Args:
+        batch_size: (int): write your description
+    """
     negative_mask = torch.ones((batch_size, 2 * batch_size), dtype=bool)
     for i in range(batch_size):
         negative_mask[i, i] = 0
@@ -24,6 +30,17 @@ def get_negative_mask(batch_size):
 
 
 def train(net, data_loader, train_optimizer, temperature, debiased, tau_plus):
+    """
+    Training function.
+
+    Args:
+        net: (todo): write your description
+        data_loader: (todo): write your description
+        train_optimizer: (todo): write your description
+        temperature: (float): write your description
+        debiased: (bool): write your description
+        tau_plus: (array): write your description
+    """
     net.train()
     total_loss, total_num, train_bar = 0.0, 0, tqdm(data_loader)
     for pos_1, pos_2, target in train_bar:
@@ -67,6 +84,14 @@ def train(net, data_loader, train_optimizer, temperature, debiased, tau_plus):
 
 # test for one epoch, use weighted knn to find the most similar images' label to assign the test image
 def test(net, memory_data_loader, test_data_loader):
+    """
+    Perform a test.
+
+    Args:
+        net: (int): write your description
+        memory_data_loader: (todo): write your description
+        test_data_loader: (todo): write your description
+    """
     net.eval()
     total_top1, total_top5, total_num, feature_bank = 0.0, 0.0, 0, []
     with torch.no_grad():

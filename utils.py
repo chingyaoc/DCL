@@ -9,6 +9,13 @@ np.random.seed(0)
 
 class STL10Pair(STL10):
     def __getitem__(self, index):
+        """
+        Return the index of the item
+
+        Args:
+            self: (todo): write your description
+            index: (int): write your description
+        """
         img, target = self.data[index], self.labels[index]
         img = Image.fromarray(np.transpose(img, (1, 2, 0)))
 
@@ -22,12 +29,28 @@ class STL10Pair(STL10):
 class GaussianBlur(object):
     # Implements Gaussian blur as described in the SimCLR paper
     def __init__(self, kernel_size, min=0.1, max=2.0):
+        """
+        Initialize the kernel.
+
+        Args:
+            self: (todo): write your description
+            kernel_size: (int): write your description
+            min: (int): write your description
+            max: (int): write your description
+        """
         self.min = min
         self.max = max
         # kernel size is set to be 10% of the image height/width
         self.kernel_size = kernel_size
 
     def __call__(self, sample):
+        """
+        Return a new sample from the kernel.
+
+        Args:
+            self: (todo): write your description
+            sample: (int): write your description
+        """
         sample = np.array(sample)
 
         # blur the image with a 50% chance

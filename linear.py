@@ -12,6 +12,14 @@ from model import Model
 
 class Net(nn.Module):
     def __init__(self, num_class, pretrained_path):
+        """
+        Initialize the module.
+
+        Args:
+            self: (todo): write your description
+            num_class: (int): write your description
+            pretrained_path: (str): write your description
+        """
         super(Net, self).__init__()
 
         # encoder
@@ -24,6 +32,13 @@ class Net(nn.Module):
         self.fc = nn.Linear(2048, num_class, bias=True)
 
     def forward(self, x):
+        """
+        Forward computation.
+
+        Args:
+            self: (todo): write your description
+            x: (todo): write your description
+        """
         x = self.f(x)
         feature = torch.flatten(x, start_dim=1)
         out = self.fc(feature)
@@ -32,6 +47,14 @@ class Net(nn.Module):
 
 # train or test for one epoch
 def train_val(net, data_loader, train_optimizer):
+    """
+    Train the model.
+
+    Args:
+        net: (todo): write your description
+        data_loader: (todo): write your description
+        train_optimizer: (todo): write your description
+    """
     is_train = train_optimizer is not None
     net.train() if is_train else net.eval()
 
