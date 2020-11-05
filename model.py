@@ -6,6 +6,13 @@ from torchvision.models.resnet import resnet50
 
 class Model(nn.Module):
     def __init__(self, feature_dim=128):
+        """
+        Initialize the network.
+
+        Args:
+            self: (todo): write your description
+            feature_dim: (str): write your description
+        """
         super(Model, self).__init__()
 
         self.f = []
@@ -21,6 +28,13 @@ class Model(nn.Module):
                                nn.ReLU(inplace=True), nn.Linear(512, feature_dim, bias=True))
 
     def forward(self, x):
+        """
+        Forward computation.
+
+        Args:
+            self: (todo): write your description
+            x: (todo): write your description
+        """
         x = self.f(x)
         feature = torch.flatten(x, start_dim=1)
         out = self.g(feature)
