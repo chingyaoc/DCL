@@ -57,10 +57,11 @@ python linear.py --model_path results/model_400.pth
 If you find this repo useful for your research, please consider citing the paper
 
 ```
-@inproceedings{chuang2020debiased,
-  title={Debiased Contrastive Learning},
-  author={Chuang, Ching-Yao and Robinson, Joshua and Yen-Chen, Lin and Torralba, Antonio and Jegelka, Stefanie},
-  booktitle={Advances in neural information processing systems},
+@article{chuang2020debiased,
+  title={Debiased contrastive learning},
+  author={Chuang, Ching-Yao and Robinson, Joshua and Lin, Yen-Chen and Torralba, Antonio and Jegelka, Stefanie},
+  journal={Advances in Neural Information Processing Systems},
+  volume={33},
   year={2020}
 }
 ```
