@@ -36,6 +36,8 @@ For instance, run the following command to train a debiased encoder.
 python main.py --tau_plus = 0.1
 ```
 
+#### *Due to the implementation of ```nn.DataParallel()```, training with at most 2 GPUs gives the best result.
+
 ## Linear evaluation
 The model is evaluated by training a linear classifier after fixing the learned embedding.
 
