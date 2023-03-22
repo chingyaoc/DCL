@@ -15,9 +15,8 @@ from model import Model
 
 def get_negative_mask(batch_size):
     negative_mask = torch.ones((batch_size, 2 * batch_size), dtype=bool)
-    for i in range(batch_size):
-        negative_mask[i, i] = 0
-        negative_mask[i, i + batch_size] = 0
+    negative_mask.fill_diagonal_(0)
+    negative_mask[:, batch_size:].fill_diagonal_(0)
 
     negative_mask = torch.cat((negative_mask, negative_mask), 0)
     return negative_mask
